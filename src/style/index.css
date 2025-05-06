@@ -15,7 +15,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   color: var(--text-color-primary);
-  background: #222524
+  background: #222524;
+  font-size: 16px;
 }
 
 h1{

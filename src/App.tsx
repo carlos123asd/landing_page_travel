@@ -1,10 +1,11 @@
 import BtnReturnMenu from "./component/atom/BtnReturnMenu"
+import { positionBtnMenu } from "./utility/positionBtnMenu"
 
 function App() {
 
   return (
     <>
-      <BtnReturnMenu />
+      <BtnReturnMenu position={positionBtnMenu.left}/>
     </>
   )
 }
