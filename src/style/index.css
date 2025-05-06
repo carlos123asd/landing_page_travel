@@ -1,0 +1,47 @@
+:root {
+  --font-Title: 'Bebas Neue', sans-serif;
+  --font-subtitle: 'Playfair Display', serif;
+  --font-other: 'Lora', serif;
+  --text-color-primary: #fff;
+  --text-color-secundary: #BDBCBC;
+  --color-view1: #4DFFC9;
+  --color-view2: #4D88FF;
+  --color-view3: #FF5B4D;
+  --color-view4: #FFB54D;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color-primary);
+  background: #222524
+}
+
+h1{
+  font-family: var(--font-Title);
+}
+h2,h3,h4,h5,h6{
+  font-family: var(--font-subtitle);
+}
+p,span,div{
+  font-family: var(--font-other);
+}
+.backgroundView1{
+  background: #4DFFC9;
+}
+.backgroundView2{
+  background: #4D88FF;
+}
+.backgroundView3{
+  background: #FF5B4D;
+}
+.backgroundView4{
+  background: #FFB54D;
+}
+.textPrimary{
+  color: #fff;
+}
+.textSecundary{
+  color: #BDBCBC;
+}
