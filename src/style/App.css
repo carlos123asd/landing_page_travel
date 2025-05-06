@@ -26,6 +26,7 @@
     border-radius: 2em
 }
 .btnReturnMenu:hover{
+    cursor: pointer;
     background: #0E0E0E;
 }
 .titMenuReturn{
