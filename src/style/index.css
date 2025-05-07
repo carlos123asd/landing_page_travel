@@ -17,6 +17,7 @@ body {
   color: var(--text-color-primary);
   background: #222524;
   font-size: 16px;
+  position: relative;
 }
 
 h1{

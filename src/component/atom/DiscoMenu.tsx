@@ -1,7 +1,15 @@
+import machupichu from '../../assets/machupichu/machupichu.png'
+
 export default function DiscoMenu() {
     return <>
-        <div>
-            <img src="" alt="" />
+        <div className='contentDisc'>
+        <div className='contentDiscSecond'>
+                 <img src={machupichu} alt="" />
+            </div> 
         </div>
     </>
 }
+
+
+
+

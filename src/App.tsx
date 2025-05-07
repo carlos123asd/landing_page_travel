@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
-      <BtnReturnMenu position={positionBtnMenu.left}/>
-      <DiscoMenu />
+      <div style={{width:"100%",height:"100vh",position:"relative"}}>
+        <BtnReturnMenu position={positionBtnMenu.left}/>
+        <DiscoMenu />
+      </div>
     </>
   )
 }

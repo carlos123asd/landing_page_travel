@@ -1,11 +1,11 @@
 @import './index.css';
 
 .btnReturnMenu{
-    width: max-content;
+    width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .8em 1.3em;
+    padding: .8em 1.5%;
     gap: 1em;
     position: relative;
     border-radius: 2em;
@@ -31,4 +31,23 @@
 }
 .titMenuReturn{
     font-weight: bold;
+}
+.contentDisc{
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 38%;
+    height: 75%;
+    position:absolute;
+    top: 12.5%;
+    left: -13%;
+}
+.contentDiscSecond{
+    width: 30%;
+    height: 60%;
+    border-radius: 50%;
+}
+.contentDiscSecond img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
