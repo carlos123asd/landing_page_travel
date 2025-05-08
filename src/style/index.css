@@ -9,15 +9,11 @@
   --color-view3: #FF5B4D;
   --color-view4: #FFB54D;
 }
-
 body {
-  margin: 0;
   min-width: 320px;
-  min-height: 100vh;
   color: var(--text-color-primary);
   background: #222524;
   font-size: 16px;
-  position: relative;
 }
 
 h1{
