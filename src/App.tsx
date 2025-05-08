@@ -1,5 +1,5 @@
 import BtnReturnMenu from "./component/atom/BtnReturnMenu"
-import DiscoMenu from "./component/atom/DiscoMenu"
+import Nav from "./component/organism/Nav"
 import { positionBtnMenu } from "./utility/positionBtnMenu"
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <BtnReturnMenu position={positionBtnMenu.left}/>
-        <DiscoMenu />
+        <Nav />
     </>
   )
 }
