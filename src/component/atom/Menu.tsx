@@ -1,6 +1,7 @@
-export default function Menu(){
-    const menu = ["machu picchu","london","singapore","bali"];
+import { useMenu } from "../../context/MenuContext";
 
+export default function Menu(){
+    const {menu,menuActive} = useMenu()
     const getWidthWord = (letters:number) => {
         if(letters === 4){
             return '200'
@@ -20,7 +21,7 @@ export default function Menu(){
                 return <div key={index} className="menuItem">
                         <svg width="100%" height="100" viewBox={`0 0 ${getWidthWord(titulo.length)} 100`}>
                             <text
-                                className="titMenu"
+                                className={`titMenu ${titulo === menuActive ? 'titMenuActive' : ''}`}
                                 x="0"
                                 y="95"
                                 fontWeight="bold"

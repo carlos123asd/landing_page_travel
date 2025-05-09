@@ -104,6 +104,9 @@
     font-size: 7rem;
     line-height: .8em;
 }
+.titMenu:hover{
+    cursor:pointer;
+}
 .titMenuActive{
     letter-spacing: .04em;
     fill: white;
@@ -125,6 +128,9 @@
     align-items: center;
     background: white;
     border-radius: 50%;
+}
+.contentMenuNav:hover{
+    cursor: pointer;
 }
 .btnsMenuNavActive{
     opacity: .5;
