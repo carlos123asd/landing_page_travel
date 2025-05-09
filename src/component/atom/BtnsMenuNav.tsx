@@ -3,8 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useMenu } from "../../context/MenuContext";
 
 export default function BtnsMenuNav(){
-    const menu = ["machu picchu","london","singapore","bali"];
-    const {setMenuActive} = useMenu();
+    const {menu,setMenuActive,setAdelante} = useMenu();
     const [index,setIndex] = useState<number>(0)
 
     const handleNext = () =>{
@@ -12,6 +11,7 @@ export default function BtnsMenuNav(){
             setIndex((prevNumber) =>{
                 const numActual = prevNumber + 1
                 setMenuActive(menu[numActual])
+                setAdelante(true)
                 return numActual
             })
         }
@@ -21,6 +21,7 @@ export default function BtnsMenuNav(){
             setIndex((prevNumber) =>{
                 const numActual = prevNumber - 1
                 setMenuActive(menu[numActual])
+                setAdelante(false)
                 return numActual
             })
         }
