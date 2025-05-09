@@ -83,22 +83,21 @@
 .menu{
     width: max-content;
     overflow: visible;
-    display: flex;
     position: absolute;
     top: 45%;
     left: 5%;
     z-index: 10;
 }
 .menuItem{
-    margin-right: 12em;
+    display: inline-block;
+    margin-right: 6.5em;
 }
 .titMenu,.numberMenu{
     margin: 0;
-    letter-spacing: .1rem;
 }
 .titMenu{
     width: max-content;
-    font-size: 8rem;
+    font-size: 7rem;
     line-height: .8em;
 }
 .titMenuActive{
