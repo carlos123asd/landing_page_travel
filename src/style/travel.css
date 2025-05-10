@@ -1,0 +1,79 @@
+:root{
+    --background: #222325;
+    --background-transparent: rgba(34, 35, 37, 0);
+}
+
+.foregroundHeader{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.foregroundHeader::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    z-index: -10;
+}
+.foregroundHeader img{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -20;
+}
+.overlay{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 20vh;
+    background: linear-gradient(var(--background-transparent), var(--background));
+}
+.contentImagesForeground img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: url(../assets/machupichu/layer-foreground-mask.png);
+    mask-size: cover;
+    mask-position: center;
+}
+.contentTitHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    gap: .3em;
+}
+.contentTitHeader h1{
+    margin: 0;
+    line-height: 1em;
+}
+.author{
+    display: flex;
+    align-items: center;
+    gap: .6em;
+    font-size: 1.1rem;
+}
+.contentIconAuthor{
+    width: max-content;
+    background: #85FFAE;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6em;
+}

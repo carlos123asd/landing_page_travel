@@ -1,4 +1,4 @@
-import imagenMachuPichu from '../../assets/machupichu/header.png'
+import imagenMachuPichu from '../assets/machupichu/header.jpg'
 
 export const imageMap = {
     'machupicchu': imagenMachuPichu,

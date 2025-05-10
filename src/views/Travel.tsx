@@ -5,6 +5,8 @@ import type { ImageMapKeys } from "../utility/imagesHeader";
 export default function Travel(){
     const { name } = useParams();
     return <>
-        <Header name={name ? name as ImageMapKeys :  'machupicchu'} />
+        <div>
+            <Header name={name ? name as ImageMapKeys :  'machupicchu'} />
+        </div>
     </>
 }
