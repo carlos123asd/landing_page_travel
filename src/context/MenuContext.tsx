@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 type typeMenuContext = {
     menuActive: string;
@@ -8,7 +8,7 @@ type typeMenuContext = {
     adelante:boolean;
 }
 
-const Context = createContext<typeMenuContext|undefined>(undefined);
+export const Context = createContext<typeMenuContext|undefined>(undefined);
 
 export const MenuProvider = ({children}:{children:React.ReactNode}) => {
     const [menuActive,setMenuActive] = useState<string>("machu picchu");
@@ -19,10 +19,4 @@ export const MenuProvider = ({children}:{children:React.ReactNode}) => {
             {children}
         </Context.Provider>
     );
-}
-
-export const useMenu = () => {
-    const context = useContext(Context)
-    if (!context) throw new Error("useMenu must be used whitin a MenuProvider")
-    return context
 }

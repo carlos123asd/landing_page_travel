@@ -1,31 +1,9 @@
-import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
-import { useMenu } from "../../context/MenuContext";
+import useMenu from "../../hooks/useMenu";
 
 export default function BtnsMenuNav(){
-    const {menu,setMenuActive,setAdelante} = useMenu();
-    const [index,setIndex] = useState<number>(0)
-
-    const handleNext = () =>{
-        if(index != 3){
-            setIndex((prevNumber) =>{
-                const numActual = prevNumber + 1
-                setMenuActive(menu[numActual])
-                setAdelante(true)
-                return numActual
-            })
-        }
-    }
-    const handleBack = () => {
-        if(index !== 0){
-            setIndex((prevNumber) =>{
-                const numActual = prevNumber - 1
-                setMenuActive(menu[numActual])
-                setAdelante(false)
-                return numActual
-            })
-        }
-    }
+    const {handleBack,handleNext,index} = useMenu();
+    
     return <>
        <div className="btnsMenuNav">
             <div onClick={handleBack} className={`contentMenuNav ${index === 0 ? 'btnsMenuNavActive' : ''}`}>

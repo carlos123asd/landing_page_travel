@@ -2,10 +2,10 @@ import machupichu from '../../assets/machupichu/machupichu.jpg'
 import london from '../../assets/london/london.jpg'
 import singapore from '../../assets/singapore/singapore.jpg'
 import bali from '../../assets/bali/bali.jpg'
-import { useMenu } from '../../context/MenuContext'
+import useMenu from '../../hooks/useMenu'
 
 export default function DiscoMenu() {
-    const {menuActive} = useMenu()
+    const {menuActive} = useMenu().context
     return <>
         <div className='contentDisc'>
             <div className='contentDiscAuxExternal'>

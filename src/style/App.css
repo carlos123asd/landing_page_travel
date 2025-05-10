@@ -97,6 +97,9 @@
     letter-spacing: .1em;
     margin-top: .5em;
 }
+.numberMenu:hover{
+    cursor: default;
+}
 .titMenu{
     width: max-content;
     font-size: 7rem;
