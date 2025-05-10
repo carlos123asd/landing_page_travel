@@ -3,10 +3,18 @@ import { getColorTit } from "../../utility/getColorMenuActive"
 
 export default function TitHeader(){
     const {context} = useMenu()
-
+    const getWidthWord = (letters:string) => {
+        if(letters === 'machu picchu' || letters === 'bali'){
+            return '180'
+        }else  if(letters === 'singapore'){
+            return '130'
+        }else{
+            return '80'
+        }
+    }
     return <>
         <div className="contentTitHeader">
-            <svg style={{display:"block",width: "max-content"}} height="210" viewBox={`0 0 180 100`}>
+            <svg style={{display:"block",width: "max-content"}} height="210" viewBox={`0 0 ${getWidthWord(context.menuActive)} 100`}>
                 <text
                     style={{letterSpacing:".02em"}}
                     x="0"
