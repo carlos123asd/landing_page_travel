@@ -4,7 +4,8 @@
 }
 
 .foregroundHeader{
-    height: 800px;
+    position: relative;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,6 +58,7 @@
     align-items: center;
     font-size: 4rem;
     gap: .3em;
+    margin-bottom: 10%;
 }
 .contentTitHeader h1{
     margin: 0;
@@ -76,4 +78,34 @@
     justify-content: center;
     align-items: center;
     padding: .6em;
+}
+.tagTituloOrganismo{
+    width: max-content;
+    font-size: .8rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    padding: .6em;
+}
+.tituloOrganismo{
+    width: max-content;
+    font-size: 1.9rem;
+    line-height: 1.29em;
+    padding: 0 4px;
+    letter-spacing: .12rem;
+    margin: .6em 0;
+}
+.contentInfoOrganismoUno{
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+    gap: 15%;
+    padding: 5em 0;
+}
+.contentParrafoOrganismoUno{
+    width: 50%;
+    font-size: 1.4rem;
+}
+.contentParrafoOrganismoUno p{
+    line-height: 2.5rem;
 }

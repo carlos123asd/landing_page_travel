@@ -8,13 +8,14 @@
   --color-view2: #4D88FF;
   --color-view3: #FF5B4D;
   --color-view4: #FFB54D;
+  --color-background: #222524;
 }
 body {
   min-width: 320px;
   color: var(--text-color-primary);
   background: #222524;
   font-size: 16px;
-  overflow: hidden;
+  overflow-x:hidden;
   margin: 0;
 }
 
@@ -44,4 +45,7 @@ p,span,div{
 }
 .textSecundary{
   color: #BDBCBC;
+}
+.textBackground{
+  color: var(--color-background)
 }
