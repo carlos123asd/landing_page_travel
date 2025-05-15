@@ -3,7 +3,10 @@ import TituloOrganism from "../component/atom/TituloOrganismo";
 import MachupichuAirOne from "../assets/machupichu/air1.jpg";
 import MachupichuAirDos from "../assets/machupichu/air2.jpg"
 import sectionTres from "../assets/machupichu/sectiontres.jpg"
+import eat1 from "../assets/machupichu/eat1.jpg"
+import eat2 from "../assets/machupichu/eat2.jpg"
 import { CgAirplane } from "react-icons/cg";
+import Estrella from "../component/atom/Estrella";
 
 export default function Travel(){
     return <>
@@ -98,6 +101,31 @@ export default function Travel(){
                     <div className="backgroundImageOrganismoTres"></div>
                 </div>
             </div>
-        </div>
+            {/*Section cuatro*/}
+            <div style={{display:"flex",flexDirection:"column",gap:"3em"}}>
+                <div className="contentBackgroundSectionCuatro">
+                    <div className="contentBackgroundLeftTopSectionCuatro">
+                        <div className="contentEstrellas">
+                            <Estrella number={5}/>
+                        </div>
+                        <p className="textSecundary contentParrafo"><a className="linkSectionCuatro" href="https://thepotluckclub.co.za/">The PotLuck Club</a> is a well-known restaurant with an innovative cuisine that serves sophisticated tapas-style dishes. Make sure you book in advance.</p>
+                    </div>
+                    <div className="contentBackgroundRightTopSectionCuatro">
+                        <img className="imagenCover" src={eat1} alt="" />
+                    </div>
+                </div>
+                <div className="contentBackgroundSectionCuatro">
+                    <div className="contentBackgroundLeftBottomSectionCuatro">
+                        <img className="imagenCover" src={eat2} alt="" />
+                    </div>
+                    <div className="contentBackgroundRightBottomSectionCuatro">
+                        <div className="contentEstrellas">
+                            <Estrella number={4}/>
+                        </div>
+                        <p className="textSecundary contentParrafo">The Neighbourgoods Market is a trendy market in and around an old mill. It opens every Saturday and offers artisan products and gourmet foods. Busy, but worth the visit.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </>
 }
