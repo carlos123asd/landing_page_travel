@@ -23,10 +23,6 @@
     display: flex;
     gap: 15%;
 }
-.contentParrafoOrganismoUno{
-    width: 50%;
-    font-size: 1.4rem;
-}
 .contentParrafoOrganismoUno p{
     line-height: 2.5rem;
 }

@@ -2,6 +2,7 @@
 @import './header.css';
 @import './machupichu/sectionUno.css';
 @import './machupichu/sectionDos.css';
+@import './machupichu/sectionTres.css';
 
 .btnReturnMenu{
     width: 5%;
