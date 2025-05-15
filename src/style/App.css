@@ -1,5 +1,7 @@
 @import './index.css';
-@import './travel.css';
+@import './header.css';
+@import './machupichu/sectionUno.css';
+@import './machupichu/sectionDos.css';
 
 .btnReturnMenu{
     width: 5%;
