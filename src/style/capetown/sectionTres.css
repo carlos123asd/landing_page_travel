@@ -1,0 +1,104 @@
+.OrganismoTres{
+    width: 90%;
+    height: 1000px;
+    position: relative;
+    display: flex;
+    align-items: last baseline;
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 15em;
+}
+.quoteOrganismoTres{
+    position: relative;
+    display: block;
+    font-size: 15rem;
+    color: #4DFFC9;
+    line-height: 0.1;
+}
+.titOrganismoTres{
+    font-size: 2rem;
+    color: #4DFFC9;
+    font-weight: bolder;
+}
+.contentTextOrganismoTres{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    z-index: 30;
+}
+.contentImageOrganismoTres{
+    width: 60%;
+    position: absolute;
+    right: 15%;
+    bottom: -5%;
+    z-index: 10;
+}
+.backgroundImageOrganismoTresChapmansPeakDrive{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/capetown/sectiontres.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    filter: blur(5px);
+}
+.backgroundImageOrganismoTresAfricanpenguin{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/capetown/sectionSiete.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    filter: blur(5px);
+}
+.backgroundImageOrganismoTresChapmansPeakDrive::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: black;
+    opacity: .8;
+}
+.backgroundImageOrganismoTresAfricanpenguin::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: black;
+    opacity: .8;
+}
+.contentimageExterior{
+    width:60%;
+    display: flex;
+    align-items:baseline;
+    padding: 1em;
+}
+.contentimageExterior::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    opacity: .2;
+    transition: all .3s ease-in-out;
+}
+.contentimageExterior:hover{
+    cursor: pointer;
+}
+.contentimageExterior:hover::before{
+    background: white;
+}

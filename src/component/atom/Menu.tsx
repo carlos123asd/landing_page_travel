@@ -12,14 +12,14 @@ export default function Menu(){
             return '330'
         }else  if(letters === 9){
             return '450'
-        }else  if(letters >= 11){
+        }else{
             return '600'
         }
     }
 
     const handleClickMenu = (titulo:string) => {
         context.setMenuActive(titulo)
-        navigate('/travel/machupicchu')
+        navigate('/travel/cape_town')
     }
 
     return <>

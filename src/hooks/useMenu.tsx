@@ -13,21 +13,21 @@ export default function useMenu(){
         if(context.adelante){
             refNumber.current = refNumber.current + 1;
             if(context.menuActive === "london"){
-                setTranslate(String(refNumber.current * -350))
+                setTranslate(String(refNumber.current * -280))
             }else if(context.menuActive === "singapore"){
-                setTranslate(String(refNumber.current * -380))
+                setTranslate(String(refNumber.current * -330))
             }else if(context.menuActive === "bali"){
-                setTranslate(String(refNumber.current * -420))
+                setTranslate(String(refNumber.current * -380))
             }
             
         }else{
             refNumber.current = refNumber.current - 1;
-            if(context.menuActive === "machu picchu"){
+            if(context.menuActive === "cape town"){
                 setTranslate(String(refNumber.current * -0))
             }else if(context.menuActive === "london"){
-                setTranslate(String(refNumber.current * -350))
+                setTranslate(String(refNumber.current * -270))
             }else if(context.menuActive === "singapore"){
-                setTranslate(String(refNumber.current * -380))
+                setTranslate(String(refNumber.current * -330))
             }
         }
     },[context.menuActive,context.adelante])

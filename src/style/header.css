@@ -48,7 +48,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    mask-image: url(../assets/machupichu/layer-foreground-mask.png);
+    mask-image: url(../assets/capetown/layer-foreground-mask.png);
     mask-size: cover;
     mask-position: center;
 }

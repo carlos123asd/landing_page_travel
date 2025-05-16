@@ -4,7 +4,7 @@ import { getColorTit } from "../../utility/getColorMenuActive"
 export default function TitHeader(){
     const {context} = useMenu()
     const getWidthWord = (letters:string) => {
-        if(letters === 'machu picchu' || letters === 'bali'){
+        if(letters === 'cape town' || letters === 'bali'){
             return '180'
         }else  if(letters === 'singapore'){
             return '130'
@@ -24,7 +24,7 @@ export default function TitHeader(){
                     stroke="white"
                     strokeWidth=".01"
                 >
-                    {context.menuActive === 'machu picchu' || context.menuActive === 'bali' ? 'Explore' : ''}
+                    {context.menuActive === 'cape town' || context.menuActive === 'bali' ? 'Explore' : ''}
                     {context.menuActive === 'singapore' ? 'Hello' : ''}
                     {context.menuActive === 'london' ? 'Hey' : ''}
                 </text>

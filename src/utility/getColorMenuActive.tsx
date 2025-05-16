@@ -1,5 +1,5 @@
 export const getColorTit = (title:string) => {
-        if(title === "machu picchu"){
+        if(title === "cape town"){
             return '#4DFFC9'
         }else if(title === "london"){
             return '#4D88FF'            

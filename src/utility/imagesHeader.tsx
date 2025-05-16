@@ -1,10 +1,10 @@
-import imagenMachuPichu from '../assets/machupichu/header.jpg'
+import imagenCapeTown from '../assets/capetown/header.jpg'
 import imageLondon from '../assets/london/header.jpg'
 import imageSingapur from '../assets/singapore/header.jpg'
 import imageBali from '../assets/bali/header.jpg'
 
 export const imageMap = {
-    'machupicchu': imagenMachuPichu,
+    'cape town': imagenCapeTown,
     'london': imageLondon,
     'singapore': imageSingapur,
     'bali': imageBali

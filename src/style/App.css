@@ -1,11 +1,11 @@
 @import './index.css';
 @import './header.css';
-@import './machupichu/sectionUno.css';
-@import './machupichu/sectionDos.css';
-@import './machupichu/sectionTres.css';
-@import './machupichu/sectionCuatro.css';
-@import './machupichu/sectionCinco.css';
-@import './machupichu/sectionSeis.css';
+@import './capetown/sectionUno.css';
+@import './capetown/sectionDos.css';
+@import './capetown/sectionTres.css';
+@import './capetown/sectionCuatro.css';
+@import './capetown/sectionCinco.css';
+@import './capetown/sectionSeis.css';
 
 .btnReturnMenu{
     width: 5%;

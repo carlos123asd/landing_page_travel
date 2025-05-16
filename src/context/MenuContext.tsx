@@ -11,9 +11,9 @@ type typeMenuContext = {
 export const Context = createContext<typeMenuContext|undefined>(undefined);
 
 export const MenuProvider = ({children}:{children:React.ReactNode}) => {
-    const [menuActive,setMenuActive] = useState<string>("machu picchu");
+    const [menuActive,setMenuActive] = useState<string>("cape town");
     const [adelante,setAdelante] = useState<boolean>(false);
-    const menu = ["machu picchu","london","singapore","bali"];
+    const menu = ["cape town","london","singapore","bali"];
     return (
         <Context.Provider value={{menuActive,setMenuActive,menu,setAdelante,adelante}}>
             {children}
