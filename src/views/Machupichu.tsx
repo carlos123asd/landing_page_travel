@@ -6,6 +6,8 @@ import sectionTres from "../assets/machupichu/sectiontres.jpg"
 import eat1 from "../assets/machupichu/eat1.jpg"
 import eat2 from "../assets/machupichu/eat2.jpg"
 import sectionCinco from "../assets/machupichu/sectionCinco.jpg"
+import sectionSeis from "../assets/machupichu/sectionSeis.jpg"
+import sectionSiete from "../assets/machupichu/sectionSiete.jpg"
 import { CgAirplane } from "react-icons/cg";
 import Estrella from "../component/atom/Estrella";
 
@@ -50,7 +52,7 @@ export default function Travel(){
             </div>
             {/*Section dos*/}
             <div className="OrganismoDos">
-                <CgAirplane style={{position:"absolute",top:-50,left:"45%",zIndex:10}} color="#4DFFC9" size={100} />
+                <CgAirplane style={{position:"absolute",top:-50,left:"47%",zIndex:10}} color="#4DFFC9" size={100} />
                 <div className="contentBackgroundOrganismoDos">
                     <div className="contentBackgroundLeft"></div>
                     <div className="contentBackgroundRight"></div>
@@ -153,6 +155,60 @@ export default function Travel(){
                         <span className="titInfoImage">Clifton and Camps Bay</span>
                         <span className="titInfoSubtitulo textSecundary">Some spots allow you to overlook the whole area</span>
                     </div>
+                </div>
+            </div>
+            {/*Section seis*/}
+            <div className="sectionSeis">
+                <CgAirplane style={{position:"absolute",top:-50,left:"47%",zIndex:10}} color="#4DFFC9" size={100} />
+                <div className="backgroundSectionSeis">
+                    <div className="backgroundContentLeft"></div>
+                    <div className="backgroundContentRight"></div>
+                </div>
+                <div className="contentMainSectionSeis">
+                    <div className="contentImageSectionSeis">
+                        <div className="imageSectionCinco">
+                            <img className="imagenCover" style={{width:"100%", height:"100%"}} src={sectionSeis} alt="" />
+                        </div>
+                        <div className="contentInfoImage">
+                            <span className="titInfoImage">Clifton and Camps Bay</span>
+                            <span className="titInfoSubtitulo textSecundary">Some spots allow you to overlook the whole area</span>
+                        </div>
+                    </div>
+                    <div className="contentImageSectionSeis">
+                        <TituloOrganism 
+                        colorTag="#4DFFC9" 
+                        tag="Table Mountain" 
+                        colorTitulo="#004732" 
+                        titulo="Above everything"
+                        />
+                        <div className="contentParrafo textSecundary">
+                            <p>A flat-topped mountain and prominent landmark that you can see from everywhere in Cape Town. Table Mountain is one of the top tourist attractions which can be visited by hiking to the top or by using the cableway. We've chosen the latter as hiking on Table Mountain is definitely not for beginners.</p>
+                            <p>Panoramic views are guaranteed when you're at the top, but you need a bit of luck as the view is often covered in clouds. Wait a bit if that's the case—you will be amazed how fast the weather can change. From a fully covered Cape Town to a cloud-free view in just a few minutes.</p>
+                            <p>Table Mountain is definitely a place to visit, but be warned: it can get cold up there. Even on sunny days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*Section siete*/}
+            <div className="OrganismoTres">
+                <div className="contentTextOrganismoTres">
+                    <span className="quoteOrganismoTres">“</span>
+                    <span className="titOrganismoTres">
+                        <mark style={{background:"#222524",color:"white"}}>Boulders Beach</mark>
+                    </span>
+                    <div className="contentParrafo textSecundary">
+                        <p>Boulders Beach is famous for its African penguins. They settled there in 1982 and have grown to a colony of about 3000 birds. Penguins are everywhere in this place. There're also smaller places to swim and you might have the luck to see a penguin near you.</p>
+                    </div>
+                </div>
+                <div className="contentImageOrganismoTres">
+                    <div className="contentimageExterior">
+                        <img className="imagenCover" src={sectionSiete} alt="" />
+                        <div style={{flexDirection:"row-reverse",alignItems:"end",marginLeft:"1em"}} className="contentInfoImage contentInfoImageVertical">
+                            <span style={{writingMode: "vertical-lr"}} className="titInfoImage">African penguin</span>
+                            <span style={{writingMode: "vertical-lr"}} className="titInfoSubtitulo textSecundary">Don't get too close. They're keeping an eye on you.</span>
+                        </div>
+                    </div>
+                    <div className="backgroundImageSectionSiete"></div>
                 </div>
             </div>
         </div> 
