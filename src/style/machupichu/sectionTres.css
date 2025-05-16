@@ -12,9 +12,9 @@
 .quoteOrganismoTres{
     position: relative;
     display: block;
-    font-size: 7rem;
+    font-size: 15rem;
     color: #4DFFC9;
-    line-height: 0.5;
+    line-height: 0.1;
 }
 .titOrganismoTres{
     font-size: 2rem;
