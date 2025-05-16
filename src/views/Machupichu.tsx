@@ -5,6 +5,7 @@ import MachupichuAirDos from "../assets/machupichu/air2.jpg"
 import sectionTres from "../assets/machupichu/sectiontres.jpg"
 import eat1 from "../assets/machupichu/eat1.jpg"
 import eat2 from "../assets/machupichu/eat2.jpg"
+import sectionCinco from "../assets/machupichu/sectionCinco.jpg"
 import { CgAirplane } from "react-icons/cg";
 import Estrella from "../component/atom/Estrella";
 
@@ -123,6 +124,34 @@ export default function Travel(){
                             <Estrella number={4}/>
                         </div>
                         <p className="textSecundary contentParrafo">The Neighbourgoods Market is a trendy market in and around an old mill. It opens every Saturday and offers artisan products and gourmet foods. Busy, but worth the visit.</p>
+                    </div>
+                </div>
+            </div>
+            {/*Section cinco*/}
+            <div className="OrganismoCinco">
+                <TituloOrganism 
+                    colorTag="#4DFFC9" 
+                    tag="Clifton & Camps Bay" 
+                    colorTitulo="#004732" 
+                    titulo="Beautiful beaches with freezing cold water"
+                    center={true}
+                />
+                <div className="contentParrafo textSecundary contentParrafosSectionCinco">
+                    <p>
+                        Clifton is a small suburb of Cape Town, known as an exclusive residential area and famous for its four white sand beaches. It's located below the top of Lion's Head and has some 
+                        <mark style={{background:"#004732",color:"white",marginLeft:".3em"}}>outstanding spots to overlook the whole area</mark>. From here, you get sweeping views of the Atlantic Ocean and Twelve Apostles.
+                    </p>
+                    <p>
+                        Clifton is followed by Camps Bay, another part of the city that attracts many South African and foreign visitors during summer. You can find a lot of tiny beaches along Victoria Road, but the water is way too cold to go swimming.
+                    </p>
+                </div>
+                <div className="contentImageOrganismoCinco">
+                    <div className="imageSectionCinco">
+                        <img className="imagenCover" style={{width:"100%", height:"100%"}} src={sectionCinco} alt="" />
+                    </div>
+                    <div className="contentInfoImage">
+                        <span className="titInfoImage">Clifton and Camps Bay</span>
+                        <span className="titInfoSubtitulo textSecundary">Some spots allow you to overlook the whole area</span>
                     </div>
                 </div>
             </div>

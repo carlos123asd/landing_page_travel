@@ -1,6 +1,10 @@
-export default function TituloOrganism({colorTag,tag,colorTitulo,titulo}:{colorTag:string,tag:string,colorTitulo:string,titulo:string}){
+export default function TituloOrganism({colorTag,tag,colorTitulo,titulo,center}:{colorTag:string,tag:string,colorTitulo:string,titulo:string,center?:boolean}) {
     return <>
-        <div>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: center ? "center" : "start",
+            justifyContent: center ? "center" : "start",}}>
             <div style={{
                 background: `${colorTag}`
             }} className="tagTituloOrganismo textBackground">{tag}</div>
