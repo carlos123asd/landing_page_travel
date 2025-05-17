@@ -6,17 +6,20 @@ export default function useMenu(){
     if (!context) throw new Error("useMenu must be used whitin a MenuProvider")
     
     const [translate,setTranslate] = useState<string>()
-    const [index,setIndex] = useState<number>(0)
+    const [index,setIndex] = useState<number>(context.menu.findIndex((titulo:string) => titulo === context.menuActive))
     const refNumber = useRef(2)
 
     useEffect(() => {
         if(context.adelante){
             refNumber.current = refNumber.current + 1;
             if(context.menuActive === "london"){
+                //refNumber.current = refNumber.current + 1;
                 setTranslate(String(refNumber.current * -280))
             }else if(context.menuActive === "singapore"){
+                //refNumber.current = refNumber.current + 1;
                 setTranslate(String(refNumber.current * -330))
             }else if(context.menuActive === "bali"){
+                //refNumber.current = refNumber.current + 1;
                 setTranslate(String(refNumber.current * -380))
             }
             

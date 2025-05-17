@@ -19,7 +19,7 @@ export default function Menu(){
 
     const handleClickMenu = (titulo:string) => {
         context.setMenuActive(titulo)
-        navigate('/travel/cape_town')
+        navigate(`/travel/${titulo.replace(' ','_')}`)
     }
 
     return <>

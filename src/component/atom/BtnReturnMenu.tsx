@@ -6,7 +6,7 @@ export default function BtnReturnMenu({position}:{position:string}) {
     const {context} = useMenu();
     const navigation = useNavigate()
     const handleReturnMenu = () => {
-        context.setMenuActive('machu picchu')
+        context.setMenuActive('cape town')
         navigation('/')
     }
     return <>
