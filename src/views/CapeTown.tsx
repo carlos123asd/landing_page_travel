@@ -95,7 +95,7 @@ export default function Travel(){
                         <div className="contentEstrellas">
                             <Estrella number={5}/>
                         </div>
-                        <p className="textSecundary contentParrafo"><a className="linkSectionCuatro" href="https://thepotluckclub.co.za/">The PotLuck Club</a> is a well-known restaurant with an innovative cuisine that serves sophisticated tapas-style dishes. Make sure you book in advance.</p>
+                        <p className="textSecundary contentParrafo"><a target="_blank" className="linkSectionCuatro" href="https://thepotluckclub.co.za/">The PotLuck Club</a> is a well-known restaurant with an innovative cuisine that serves sophisticated tapas-style dishes. Make sure you book in advance.</p>
                     </div>
                     <div className="contentBackgroundRightTopSectionCuatro">
                         <img className="imagenCover" src={eat1} alt="" />
