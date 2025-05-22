@@ -1,0 +1,73 @@
+.contentMainSectionDosLondon{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin: 5em 0;
+}
+.contentSectionDosLondonTop{
+    display: flex;
+    width: 100%;
+    height: 350px;
+    margin-top: 5em;
+}
+.contentBackgroundLondonLeftTop{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 94% 100%, 0 100%);
+    background: #2F3032;
+}
+.contentTextLondonSectionDos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contentTextLondonSectionDos p{
+    text-align: center;
+}
+.linkSectionDosLondon{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.linkSectionDosLondon::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #4D88FF;
+    transition: all .3s ease-in-out;
+}
+.linkSectionDosLondon:hover::after{
+    top: 110%;
+}
+.contentBackgroundLondonRightTop{
+    width: 40%;
+    height: 100%;
+    clip-path: polygon(9% 0%, 100% 0, 100% 100%, 0 100%);
+}
+.contentSectionDosLondonBottom{
+    display: flex;
+    width: 100%;
+    height: 350px;
+}
+.contentBackgroundLondonLeftBottom{
+    width: 40%;
+    height: 100%;
+    clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%);
+}
+.contentBackgroundLondonRightBottom{
+    display: flex;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+    width: 60%;
+    height: 100%;
+    background: #2F3032;
+}
+
