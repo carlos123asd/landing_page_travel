@@ -4,6 +4,8 @@ import TituloOrganism from "../component/atom/TituloOrganismo";
 import Header from "../component/organism/Header";
 import section2 from "../assets/london/section2.jpg";
 import section22 from "../assets/london/section22.jpg";
+import section3 from "../assets/london/section3.jpg";
+import { FaChevronLeft } from "react-icons/fa";
 export default function London() {
     return <>
         <div>
@@ -73,7 +75,35 @@ export default function London() {
                     <p className="textSecundary contentParrafo">Many people, narrow passageways and loud trains everywhere. Travailing with the transit system of London isn't relaxing. The London Underground is old and ugly, but yet so beautiful and special.</p>
                 </div>
                 <div className="contentImageSectionTresLondon">
-                    <img src="" alt="" />
+                    <div className="backgroundLeftSectionTresLondon"></div>
+                    <div className="backgroundMiddleSectionTresLondon">
+                        <img src={section3} className="imagenCover" alt="" />
+                    </div>
+                    <div className="backgroundRightSectionTresLondon"></div>
+                     <div className="contentBtnsSectionTresLondon">
+                        <div className="btnLeftSectionTresLondon">
+                            <FaChevronLeft size={24} color="#222325" />
+                        </div>
+                        <div className="btnRightSectionTresLondon">
+                            <FaChevronLeft size={24} color="#222325" style={{transform: "rotate(180deg)"}} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*Section cuatro*/}
+            <div style={{marginBottom:"10em"}} className="contentSectionUnoLondon">
+                <div style={{display:"flex",flexDirection:"column",gap:"4em"}} className="contentSectionUnoLondonImage">
+                     <TituloOrganism
+                    colorTag="#4D88FF" 
+                    tag="London by Night" 
+                    colorTitulo="#454A54" 
+                    titulo="The city that shines by night" />
+                    <MultiImageWithDescription space="london" section="2" />
+                </div>
+                <div className="contentSectionUnoLondonImage contentParrafo textSecundary">
+                    <p>Let's talk about how beautiful London looks by night. The sky was covered with clouds most of the time and we only saw the sun on the day we arrived. A bad condition for photography. Turns out this isn't a problem in London, as the city shines by night. <mark style={{background:"#454A54",color:"white"}}>The winter decoration, the streetlights and the characteristic buildings are gorgeous.</mark> Walking along the streets and taking photos of them started to get addicting. Why even going outside during day when everything looks better by night?</p>
+                    <p>I love modern architecture and cities, but they are different. They're well planned, buildings look very similar and there're usually only a few outstanding highlights. It's normal to walk long distances without seeing anything that's visually appealing. My step counter was way higher in Singapore and Dubai than in London, because of the fact that we had to walk along long tunnels connecting buildings or train stations—tunnels which are mostly filled with advertisement, retail chains and people who are walking from A to B.</p>
+                    <p>London also has those areas, but the core city is filled with old buildings; <mark style={{background:"#454A54",color:"white"}}>architecture with character and stories</mark> . You can see that old cities have grown organically. Their buildings are at close quarters. Everything is stuffed closely together and looks different while keeping the charm of London. There's so much happening around you, so take a walk and enjoy the city.</p>
                 </div>
             </div>
         </div>

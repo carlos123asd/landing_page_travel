@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    margin: 10em 0;
+    gap: 4em;
 }
 .contentHeaderSectionTresLondon{
     width: 50%;;
@@ -10,7 +12,69 @@
     width: 65%;
 }
 .contentImageSectionTresLondon{
+    display: flex;
     width: 100%;
     height: 800px;
-    border: 1px solid red;
+    position: relative;
+}
+.backgroundLeftSectionTresLondon{
+    width: 12%;
+    height: 100%;
+    background: #2F3032;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+.backgroundMiddleSectionTresLondon{
+    width: 76%;
+    height: 100%;
+    background: #2F3032;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+.backgroundRightSectionTresLondon{
+    width: 12%;
+    height: 100%;
+    background: #2F3032;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+}
+.contentBtnsSectionTresLondon{
+    display: flex;
+    justify-content: space-between;
+    width: 76%;
+    position: absolute;
+    left: 12%;
+    top: 48.5%;
+    z-index: 10;
+}
+.btnLeftSectionTresLondon{
+    margin-left: .5%;
+}
+.btnRightSectionTresLondon{
+    margin-right: .5%;
+}
+.btnLeftSectionTresLondon,.btnRightSectionTresLondon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+}
+.btnLeftSectionTresLondon:hover,.btnRightSectionTresLondon:hover{
+    cursor: pointer;
+}
+.backgroundMiddleSectionTresLondon:hover{
+    cursor: pointer;
+}
+.backgroundMiddleSectionTresLondon:hover::before{
+    background: white;
+}
+.backgroundMiddleSectionTresLondon::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    opacity: .2;
+    transition: all .3s ease-in-out;
 }
