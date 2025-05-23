@@ -8,6 +8,7 @@
 @import './capetown/sectionSeis.css';
 @import './london/sectionUno.css';
 @import './london/sectionDos.css';
+@import './london/sectionTres.css';
 
 .btnReturnMenu{
     width: 5%;

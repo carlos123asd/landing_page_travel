@@ -1,0 +1,16 @@
+.contentSectionTresLondon{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.contentHeaderSectionTresLondon{
+    width: 50%;;
+}
+.contentHeaderSectionTresLondon p{
+    width: 65%;
+}
+.contentImageSectionTresLondon{
+    width: 100%;
+    height: 800px;
+    border: 1px solid red;
+}

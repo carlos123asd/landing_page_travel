@@ -51,6 +51,7 @@
     width: 40%;
     height: 100%;
     clip-path: polygon(9% 0%, 100% 0, 100% 100%, 0 100%);
+    position: relative;
 }
 .contentSectionDosLondonBottom{
     display: flex;
@@ -61,6 +62,7 @@
     width: 40%;
     height: 100%;
     clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%);
+    position: relative;
 }
 .contentBackgroundLondonRightBottom{
     display: flex;
@@ -70,4 +72,21 @@
     height: 100%;
     background: #2F3032;
 }
-
+.contentBackgroundLondonRightTop::before,.contentBackgroundLondonLeftBottom::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    opacity: .2;
+    transition: all .3s ease-in-out;
+}
+.contentBackgroundLondonRightTop:hover,
+.contentBackgroundLondonLeftBottom:hover{
+    cursor: pointer;
+}
+.contentBackgroundLondonRightTop:hover::before,
+.contentBackgroundLondonLeftBottom:hover::before{
+    background: white;
+}

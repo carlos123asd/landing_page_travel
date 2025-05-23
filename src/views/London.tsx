@@ -54,11 +54,26 @@ export default function London() {
                                 <Estrella number={2} color="#4D88FF" />
                             </div>
                             <p className="textSecundary contentParrafo">
-                                <a target="_blank" className="linkSectionDosLondon" href="https://boroughmarket.org.uk/">He View from The Shard </a>
+                                Getting up to 
+                                <a target="_blank" className="linkSectionDosLondon" href="https://www.theviewfromtheshard.com/"> The View from The Shard </a>
                                 isn't cheap and the view isn't more than a typical skyscraper view.
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+            {/*Section tres*/}
+            <div  className="contentSectionTresLondon">
+                <div className="contentHeaderSectionTresLondon">
+                    <TituloOrganism
+                        colorTag="#4D88FF" 
+                        tag="METRO" 
+                        colorTitulo="#454A54" 
+                        titulo="The Undeground" />
+                    <p className="textSecundary contentParrafo">Many people, narrow passageways and loud trains everywhere. Travailing with the transit system of London isn't relaxing. The London Underground is old and ugly, but yet so beautiful and special.</p>
+                </div>
+                <div className="contentImageSectionTresLondon">
+                    <img src="" alt="" />
                 </div>
             </div>
         </div>
