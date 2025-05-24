@@ -13,11 +13,10 @@
 @import './bali/backgroundAndLink.css';
 
 .btnReturnMenu{
-    width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .8em 1.5%;
+    padding: .8em 2em;
     gap: 1em;
     position: relative;
     border-radius: 2em;
@@ -46,8 +45,8 @@
 }
 .contentDisc{
     border-radius: 50%;
-    width: 40%;
-    height: 80%;
+    width: 751px;
+    height: 751px;
     position:absolute;
     top: 10%;
     left: -15%;
