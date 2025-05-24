@@ -4,8 +4,7 @@ import TituloOrganism from "../component/atom/TituloOrganismo";
 import Header from "../component/organism/Header";
 import section2 from "../assets/london/section2.jpg";
 import section22 from "../assets/london/section22.jpg";
-import section3 from "../assets/london/section3.jpg";
-import { FaChevronLeft } from "react-icons/fa";
+import SliderImagen from "../component/atom/SliderImagen";
 export default function London() {
     return <>
         <div>
@@ -76,18 +75,8 @@ export default function London() {
                 </div>
                 <div className="contentImageSectionTresLondon">
                     <div className="backgroundLeftSectionTresLondon"></div>
-                    <div className="backgroundMiddleSectionTresLondon">
-                        <img src={section3} className="imagenCover" alt="" />
-                    </div>
+                    <SliderImagen space="london"/>
                     <div className="backgroundRightSectionTresLondon"></div>
-                     <div className="contentBtnsSectionTresLondon">
-                        <div className="btnLeftSectionTresLondon">
-                            <FaChevronLeft size={24} color="#222325" />
-                        </div>
-                        <div className="btnRightSectionTresLondon">
-                            <FaChevronLeft size={24} color="#222325" style={{transform: "rotate(180deg)"}} />
-                        </div>
-                    </div>
                 </div>
             </div>
             {/*Section cuatro*/}
