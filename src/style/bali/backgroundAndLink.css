@@ -1,0 +1,63 @@
+.backgroundImageOrganismoTresBananaseverywhere{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/bali/section3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    filter: blur(5px);
+}
+.backgroundImageOrganismoTresBananaseverywhere::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222524;
+    opacity: .8;
+    position: absolute;
+    z-index: -10;
+}
+.backgroundopacityMonkey{
+    position: relative;
+}
+.backgroundopacityMonkey::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222524;
+    opacity: .8;
+    position: absolute;
+    z-index: -10;
+}
+.quoteBali{
+    position: relative;
+    display: block;
+    font-size: 15rem;
+    color: #FFB54D;
+    line-height: 0.1;
+}
+.linkBali{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.linkBali::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 2px;
+    background: #FFB54D;
+    transition: all 0.3s ease-in-out;
+}
+.linkBali:hover::after{
+    top: 110%;
+}
