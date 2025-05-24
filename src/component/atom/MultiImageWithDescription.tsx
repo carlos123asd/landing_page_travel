@@ -22,7 +22,7 @@ export default function MultiImageWithDescription({space,section}:{space:MultiIm
             <div className="contentControlMultiImage">
                 {
                     multiImages[space][section].map((image,index:number) => {
-                        return <div className="imgMultiImage">
+                        return <div className="imgMultiImage" key={index}>
                             <div onClick={() => handleClick(index)} style={{height:"100%"}} className={imageActive===index ? "" : "imgMultiInactive"}><img className="imagenCover" src={image.imagen} alt="" /></div>
                         </div>
                     })
