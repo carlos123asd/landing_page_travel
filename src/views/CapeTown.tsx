@@ -13,6 +13,7 @@ import { CgAirplane } from "react-icons/cg";
 import Estrella from "../component/atom/Estrella";
 import ImagenWithDescription from "../component/atom/ImagenWithDescription";
 import InfoImage from "../component/atom/InfoImage";
+import BackgroundPoligon from "../component/atom/BackgroundPoligon"
 
 export default function Travel(){
     return <>
@@ -91,26 +92,26 @@ export default function Travel(){
             {/*Section cuatro*/}
             <div style={{display:"flex",flexDirection:"column",gap:"3em"}}>
                 <div className="contentBackgroundSectionCuatro">
-                    <div className="contentBackgroundLeftTopSectionCuatro">
+                    <BackgroundPoligon position="leftTop">
                         <div className="contentEstrellas">
                             <Estrella number={5} color="#4DFFC9"/>
                         </div>
                         <p className="textSecundary contentParrafo"><a target="_blank" className="linkSectionCuatro" href="https://thepotluckclub.co.za/">The PotLuck Club</a> is a well-known restaurant with an innovative cuisine that serves sophisticated tapas-style dishes. Make sure you book in advance.</p>
-                    </div>
-                    <div className="contentBackgroundRightTopSectionCuatro">
+                    </BackgroundPoligon>
+                    <BackgroundPoligon position="rightTop">
                         <img className="imagenCover" src={eat1} alt="" />
-                    </div>
+                    </BackgroundPoligon>
                 </div>
                 <div className="contentBackgroundSectionCuatro">
-                    <div className="contentBackgroundLeftBottomSectionCuatro">
+                    <BackgroundPoligon position="leftBottom">
                         <img className="imagenCover" src={eat2} alt="" />
-                    </div>
-                    <div className="contentBackgroundRightBottomSectionCuatro">
+                    </BackgroundPoligon>
+                    <BackgroundPoligon position="rightBottom">
                         <div className="contentEstrellas">
                             <Estrella number={4} color="#4DFFC9"/>
                         </div>
                         <p className="textSecundary contentParrafo">The Neighbourgoods Market is a trendy market in and around an old mill. It opens every Saturday and offers artisan products and gourmet foods. Busy, but worth the visit.</p>
-                    </div>
+                    </BackgroundPoligon>
                 </div>
             </div>
             {/*Section cinco*/}

@@ -5,6 +5,7 @@ import Header from "../component/organism/Header";
 import section2 from "../assets/london/section2.jpg";
 import section22 from "../assets/london/section22.jpg";
 import SliderImagen from "../component/atom/SliderImagen";
+import BackgroundPoligon from "../component/atom/BackgroundPoligon";
 export default function London() {
     return <>
         <div>
@@ -30,7 +31,7 @@ export default function London() {
             {/*Section dos*/}
             <div className="contentMainSectionDosLondon">
                 <div className="contentSectionDosLondonTop">
-                    <div className="contentBackgroundLondonLeftTop">
+                     <BackgroundPoligon position="leftTop">
                         <div className="contentTextLondonSectionDos">
                             <div className="contentEstrellas">
                                 <Estrella number={5} color="#4D88FF" />
@@ -40,16 +41,16 @@ export default function London() {
                                 is one of the largest and oldest food markets in London and focuses on specialty foods.
                             </p>
                         </div>
-                    </div>
-                    <div className="contentBackgroundLondonRightTop">
+                    </BackgroundPoligon>
+                    <BackgroundPoligon position="rightTop">
                         <img className="imagenCover" src={section2} alt="" />
-                    </div>
+                    </BackgroundPoligon>
                 </div>
                 <div className="contentSectionDosLondonBottom">
-                    <div className="contentBackgroundLondonLeftBottom">
+                    <BackgroundPoligon position="leftBottom">
                         <img className="imagenCover" src={section22} alt="" />
-                    </div>
-                    <div className="contentBackgroundLondonRightBottom">
+                    </BackgroundPoligon>
+                    <BackgroundPoligon position="rightBottom">
                         <div className="contentTextLondonSectionDos">
                             <div className="contentEstrellas">
                                 <Estrella number={2} color="#4D88FF" />
@@ -60,7 +61,7 @@ export default function London() {
                                 isn't cheap and the view isn't more than a typical skyscraper view.
                             </p>
                         </div>
-                    </div>
+                    </BackgroundPoligon>
                 </div>
             </div>
             {/*Section tres*/}
