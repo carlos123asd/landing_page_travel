@@ -91,9 +91,14 @@
     background: white;
 }
 @media only screen and (max-width:1025px){
-    
+     .contetnInfoOrganismoDos{
+        width: 90%;
+    }
+    .OrganismoDos{
+        padding: 10em 5% !important;
+    }
 }
-@media only screen and (max-width:430px){
+@media only screen and (max-width:820px){
     .contentSectionUnoLondon{
         width: 100%;
         flex-direction: column;
