@@ -7,11 +7,11 @@ export default function TitHeader(){
     const {context} = useMenu()
     const getWidthWord = (letters:string) => {
         if(letters === 'cape town' || letters === 'bali'){
-            return sizeWidth < 450 ? '111' : '180'
+            return sizeWidth > 300 && sizeWidth < 1025 ? '111' : '180'
         }else  if(letters === 'singapore'){
             return '130'
         }else{
-            return '80'
+            return sizeWidth > 300 && sizeWidth < 1025 ? '50' : '80'
         }
     }
 

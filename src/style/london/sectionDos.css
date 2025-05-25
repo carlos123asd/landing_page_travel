@@ -90,3 +90,36 @@
 .contentBackgroundLondonLeftBottom:hover::before{
     background: white;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .contentSectionUnoLondon{
+        width: 100%;
+        flex-direction: column;
+    }
+    .contentSectionUnoLondonImage{
+        width: 100%;
+    }
+    .contentMultiImageDescription{
+        flex-direction: column;
+    }
+    .contentInfoMultiImage{
+        writing-mode: initial;
+        transform: rotateZ(0deg);
+        flex-direction: column;
+    }
+    .contentSectionUnoLondonImage .tituloOrganismo{
+       width: 90%;
+       padding-left: .8em;
+    }
+    .imgMultiImage{
+        width: 15%;
+    }
+    .contentSectionUnoLondonImage p{
+        padding: 0 1em;
+    }
+    .contentMainSectionDosLondon{
+        margin: 0;
+    }
+}

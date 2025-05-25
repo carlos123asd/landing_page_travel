@@ -78,3 +78,35 @@
     opacity: .2;
     transition: all .3s ease-in-out;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .contentHeaderSectionTresLondon{
+        width: 100%;
+    }
+    .contentHeaderSectionTresLondon .contentParrafo{
+        width: 100%;
+    }
+    .backgroundLeftSectionTresLondon,.backgroundRightSectionTresLondon{
+        display: none;
+    }
+    .backgroundMiddleSectionTresLondon{
+        width: 100%;
+        clip-path: none;
+    }
+    .btnLeftSectionTresLondon,.btnRightSectionTresLondon{
+        width: 42px;
+        height: 42px;
+    }
+    .contentBtnsSectionTresLondon{
+        width: 100%;
+        left: 0;
+    }
+    .contentSectionTresLondon{
+        margin: 5em 0;
+    }
+    .contentTextLondonSectionDos{
+        width: 100%;
+    }
+}
