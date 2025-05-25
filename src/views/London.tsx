@@ -6,6 +6,7 @@ import section2 from "../assets/london/section2.jpg";
 import section22 from "../assets/london/section22.jpg";
 import SliderImagen from "../component/atom/SliderImagen";
 import BackgroundPoligon from "../component/atom/BackgroundPoligon";
+import type { MultiImagesSection, MultiImagesSpace } from "../utility/MultiImages";
 export default function London() {
     return <>
         <div>
@@ -88,7 +89,7 @@ export default function London() {
                     tag="London by Night" 
                     colorTitulo="#454A54" 
                     titulo="The city that shines by night" />
-                    <MultiImageWithDescription space="london" section="2" />
+                    <MultiImageWithDescription space="london" section={2 as unknown as MultiImagesSection<MultiImagesSpace>} />
                 </div>
                 <div className="contentSectionUnoLondonImage contentParrafo textSecundary">
                     <p>Let's talk about how beautiful London looks by night. The sky was covered with clouds most of the time and we only saw the sun on the day we arrived. A bad condition for photography. Turns out this isn't a problem in London, as the city shines by night. <mark style={{background:"#454A54",color:"white"}}>The winter decoration, the streetlights and the characteristic buildings are gorgeous.</mark> Walking along the streets and taking photos of them started to get addicting. Why even going outside during day when everything looks better by night?</p>
