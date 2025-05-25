@@ -9,7 +9,7 @@ export default function TitHeader(){
         if(letters === 'cape town' || letters === 'bali'){
             return sizeWidth > 300 && sizeWidth < 1025 ? '111' : '180'
         }else  if(letters === 'singapore'){
-            return '130'
+            return sizeWidth > 300 && sizeWidth < 1025 ? '78' : '130'
         }else{
             return sizeWidth > 300 && sizeWidth < 1025 ? '50' : '80'
         }
