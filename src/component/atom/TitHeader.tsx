@@ -1,17 +1,30 @@
+import { useEffect, useState } from "react"
 import useMenu from "../../hooks/useMenu"
 import { getColorTit } from "../../utility/getColorMenuActive"
 
 export default function TitHeader(){
+    const [sizeWidth,setSizeWidth] = useState<number>(window.innerWidth);
     const {context} = useMenu()
     const getWidthWord = (letters:string) => {
         if(letters === 'cape town' || letters === 'bali'){
-            return '180'
+            return sizeWidth < 450 ? '111' : '180'
         }else  if(letters === 'singapore'){
             return '130'
         }else{
             return '80'
         }
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSizeWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize',handleResize)
+        }
+    },[])
+
     return <>
         <div className="contentTitHeader">
             <svg style={{display:"block",width: "max-content"}} height="210" viewBox={`0 0 ${getWidthWord(context.menuActive)} 100`}>

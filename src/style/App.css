@@ -85,6 +85,8 @@
     opacity: 0;
 }
 .groupMenu{
+    display: flex;
+    align-items: center;
     height: 750px;
 }
 .menu{
@@ -92,7 +94,7 @@
     width: max-content;
     overflow: visible;
     position: absolute;
-    top: 45%;
+    margin-top: 5em;
     left: 5%;
     z-index: 10;
     transform: translateX(0);
@@ -146,4 +148,15 @@
 }
 .btnsMenuNavActive{
     opacity: .5;
+}
+
+@media only screen and (max-width:1025px){
+    .titMenu{
+        font-size: 6rem;
+    }
+}
+@media only screen and (max-width:430px){
+    .titMenu{
+        font-size: 5rem;
+    }
 }

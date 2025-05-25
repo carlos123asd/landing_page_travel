@@ -109,3 +109,22 @@
 .contentBackgroundLeftBottomSectionCuatro:hover::before{
     background: white;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .contentBackgroundRightTopSectionCuatro{
+        display: none;
+    }
+    .contentBackgroundLeftBottomSectionCuatro{
+        display: none;
+    }
+    .contentBackgroundLeftTopSectionCuatro,.contentBackgroundRightBottomSectionCuatro{
+        width: 100% !important;
+        clip-path: none !important;
+        padding-left: 0 !important;
+    }
+    .contentBackgroundLeftTopSectionCuatro p,.contentBackgroundRightBottomSectionCuatro p{
+        width: 90%  !important;
+    }
+}

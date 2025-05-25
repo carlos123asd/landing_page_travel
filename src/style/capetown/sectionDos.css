@@ -68,3 +68,30 @@
 .contentImageOrganismoDos:hover::before{
     background: white;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .OrganismoDos{
+        margin-top: 18em;
+    }
+    .contetnInfoOrganismoDos{
+        flex-direction: column;
+    }
+    .contentTextOrganismoDos,.contentRightImagenOrganismoDos{
+        width: 100%;
+    }
+    .contentImageOrganismoDos{
+        clip-path: none;
+    }
+    .OrganismoDos{
+        padding: 5em 0;
+    }
+    .contentTextOrganismoDos p{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .tagTituloOrganismo{
+        margin-left: 1.5em;
+    }
+}

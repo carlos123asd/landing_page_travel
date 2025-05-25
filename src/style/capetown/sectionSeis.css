@@ -38,3 +38,31 @@
     width: 50%;
     height: 100%;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .contentMainSectionSeis{
+        flex-direction: column;
+        gap: 5em;
+        width: 100%;
+    }
+    .contentImageSectionSeis{
+        width: 100%;
+    }
+    .sectionSeis{
+        height: auto;
+        padding: 5em 0;
+        margin: 10em 0;
+        margin-bottom: 5em;
+    }
+    .sectionSeis .tituloOrganismo{
+        margin-left: .5em;
+    }
+    .sectionSeis .contentParrafo  p{
+        padding: 0 1em;
+    }
+    .sectionSeis .contentInfoImage{
+        padding-left: .5em;
+    }
+}

@@ -75,3 +75,45 @@
     font-weight: bold;
     margin-top: 1em;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .OrganismoUno{
+        width: 100%;
+    }
+    .OrganismoUno .tituloOrganismo{
+        margin-left: .5em;
+    }
+    .OrganismoUno .contentParrafo p{
+        padding: 0 1em;
+    }
+    .contentInfoOrganismoUno{
+        flex-direction: column;
+    }
+    .tituloOrganismo{
+        width: auto;
+    }
+    .contentImagesTrapezio{
+        flex-direction: column;
+        gap: 8em;
+    }
+    .contentimageTrapezio{
+        width: 100%;
+    }
+    .ImageTrapezioLeft,.ImageTrapezioRight{
+        clip-path: none;
+    }
+    .contentParrafo{
+        font-size: 1rem;
+    }
+    .tituloOrganismo{
+        font-size: 1.5rem;
+    }
+    .tagTituloOrganismo{
+        font-size: .7rem;
+    }
+    .titInfoSubtitulo,.titInfoImage{
+        font-size: .7rem;
+    }
+}

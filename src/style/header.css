@@ -79,3 +79,13 @@
     align-items: center;
     padding: .6em;
 }
+@media only screen and (max-width:1025px){
+    .titMenu{
+        font-size: 6rem;
+    }
+}
+@media only screen and (max-width:430px){
+    .contentTitHeader{
+        font-size: 2.5rem;
+    }
+}

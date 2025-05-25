@@ -49,7 +49,7 @@ export default function Travel(){
             </div>
             {/*Section dos*/}
             <div className="OrganismoDos">
-                <CgAirplane style={{position:"absolute",top:-50,left:"47%",zIndex:10}} color="#4DFFC9" size={100} />
+                <CgAirplane style={{position:"absolute",top:-50,left:"40%",zIndex:10}} color="#4DFFC9" size={100} />
                 <div className="contentBackgroundOrganismoDos">
                     <div className="contentBackgroundLeft"></div>
                     <div className="contentBackgroundRight"></div>
@@ -141,7 +141,7 @@ export default function Travel(){
             </div>
             {/*Section seis*/}
             <div className="sectionSeis">
-                <CgAirplane style={{position:"absolute",top:-50,left:"47%",zIndex:10}} color="#4DFFC9" size={100} />
+                <CgAirplane style={{position:"absolute",top:-50,left:"40%",zIndex:10}} color="#4DFFC9" size={100} />
                 <div className="backgroundSectionSeis">
                     <div className="backgroundContentLeft"></div>
                     <div className="backgroundContentRight"></div>

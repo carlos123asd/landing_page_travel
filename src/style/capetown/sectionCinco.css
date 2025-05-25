@@ -36,3 +36,21 @@
     height:700px;
     margin:0 auto;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .contentParrafosSectionCinco{
+        flex-direction: column;
+        gap: 0;
+    }
+    .OrganismoCinco .tituloOrganismo,.contentParrafosSectionCinco{
+        width: 90%;
+    }
+    .contentImageOrganismoCinco{
+        width: 100%;
+    }
+    .OrganismoCinco{
+        margin: 5em 0;
+    }
+}

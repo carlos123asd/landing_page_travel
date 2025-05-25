@@ -102,3 +102,35 @@
 .contentimageExterior:hover::before{
     background: white;
 }
+@media only screen and (max-width:1025px){
+    
+}
+@media only screen and (max-width:430px){
+    .OrganismoTres{
+        width: auto;
+        height: auto;
+        flex-direction: column-reverse;
+        margin-left: 0;
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+    .contentImageOrganismoTres{
+        position: initial;
+    }
+    .contentTextOrganismoTres{
+        width: 100%;
+    }
+    .titOrganismoTres{
+        padding-left: .5em;
+    }
+    .contentTextOrganismoTres .contentParrafo p{
+        padding: 0 1em;
+    }
+    .contentImageOrganismoTres{
+        width: 100%;
+    }
+    .contentInfoImage {
+        margin-left: 0;
+        gap: 0;
+    }
+}
