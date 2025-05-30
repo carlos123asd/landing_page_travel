@@ -1,5 +1,6 @@
 @import './index.css';
-@import './header.css';
+@import './commons/header.css';
+@import './commons/Modal.css';
 @import './capetown/sectionUno.css';
 @import './capetown/sectionDos.css';
 @import './capetown/sectionTres.css';

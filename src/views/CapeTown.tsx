@@ -14,10 +14,19 @@ import Estrella from "../component/atom/Estrella";
 import ImagenWithDescription from "../component/atom/ImagenWithDescription";
 import InfoImage from "../component/atom/InfoImage";
 import BackgroundPoligon from "../component/atom/BackgroundPoligon"
+import ModalPhoto from "../component/atom/ModalPhoto";
+import { useState } from "react";
 
 export default function Travel(){
+    const [showModal,setShowModal] = useState<boolean>(false);
+    const [imagenModal,setImageModal] = useState<string>("");
+    const handleClickPhoto = (imagen:string) => {
+        setImageModal(imagen)
+        setShowModal(true)
+    };
     return <>
-        <div>
+        <div style={{position:"relative"}}>
+            <ModalPhoto show={showModal} close={setShowModal} imagen={imagenModal}/>
             <Header name='cape town' />
             {/*Section uno*/}
             <div className="OrganismoUno">
@@ -34,13 +43,16 @@ export default function Travel(){
                 </div>
                 <div className="contentImagesTrapezio">
                     <div className="contentimageTrapezio">
-                        <div className="ImageTrapezioLeft">
+                        <div onClick={() => handleClickPhoto(CapeTownAirOne)} className="ImageTrapezioLeft">
                             <img className="imagenCover" src={CapeTownAirOne} alt="" />
                         </div>
-                        <InfoImage titulo="Cape Town" subtitulo="Both Table Mountain and the newly build stadium stand out" />
+                        <InfoImage 
+                        titulo="Cape Town" 
+                        subtitulo="Both Table Mountain and the newly build stadium stand out"
+                        />
                     </div>
                     <div className="contentimageTrapezio">
-                        <div className="ImageTrapezioRight">
+                        <div onClick={() => handleClickPhoto(CapeTownAirDos)} className="ImageTrapezioRight">
                             <img className="imagenCover" src={CapeTownAirDos} alt="" />
                         </div>
                         <InfoImage titulo="The Twelve Apostles" subtitulo="A 6 km mountain range that actually consists of 18 peaks—not 12" />
@@ -68,7 +80,7 @@ export default function Travel(){
                         </div>
                     </div>
                     <div className="contentRightImagenOrganismoDos">
-                        <div className="contentImageOrganismoDos">
+                        <div onClick={() => handleClickPhoto(sectionDos)} className="contentImageOrganismoDos">
                             <img className="imagenCover" src={sectionDos} alt="" />
                         </div>
                         <InfoImage titulo="View from the top" subtitulo="From here you can see Table Mountain and the Twelve Apostles" />
@@ -87,7 +99,7 @@ export default function Travel(){
                         <p>We arrived quite early at the Chapman's Peak lookout point, around two hours before sunset. It was extremely windy and started to get cold. Turned out that the sunset wasn't more than an average sunset, but the time we spent was so relaxing. We could sit there forever.</p>
                     </div>
                 </div>
-                <ImagenWithDescription img={sectionTres} tit="Chapman's Peak Drive" subtitulo="A spectacular road between mountain and ocean" vertical={true} />
+                <ImagenWithDescription handleClick={() => handleClickPhoto(sectionTres)} img={sectionTres} tit="Chapman's Peak Drive" subtitulo="A spectacular road between mountain and ocean" vertical={true} />
             </div>
             {/*Section cuatro*/}
             <div style={{display:"flex",flexDirection:"column",gap:"3em"}}>
@@ -98,12 +110,12 @@ export default function Travel(){
                         </div>
                         <p className="textSecundary contentParrafo"><a target="_blank" className="linkSectionCuatro" href="https://thepotluckclub.co.za/">The PotLuck Club</a> is a well-known restaurant with an innovative cuisine that serves sophisticated tapas-style dishes. Make sure you book in advance.</p>
                     </BackgroundPoligon>
-                    <BackgroundPoligon position="rightTop">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(eat1)} position="rightTop">
                         <img className="imagenCover" src={eat1} alt="" />
                     </BackgroundPoligon>
                 </div>
                 <div className="contentBackgroundSectionCuatro">
-                    <BackgroundPoligon position="leftBottom">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(eat2)} position="leftBottom">
                         <img className="imagenCover" src={eat2} alt="" />
                     </BackgroundPoligon>
                     <BackgroundPoligon position="rightBottom">
@@ -133,7 +145,7 @@ export default function Travel(){
                     </p>
                 </div>
                 <div className="contentImageOrganismoCinco">
-                    <div className="imageSectionCinco">
+                    <div onClick={() => handleClickPhoto(sectionCinco)} className="imageSectionCinco">
                         <img className="imagenCover" style={{width:"100%", height:"100%"}} src={sectionCinco} alt="" />
                     </div>
                     <InfoImage titulo="Clifton and Camps Bay" subtitulo="Some spots allow you to overlook the whole area" />
@@ -147,7 +159,7 @@ export default function Travel(){
                     <div className="backgroundContentRight"></div>
                 </div>
                 <div className="contentMainSectionSeis">
-                    <ImagenWithDescription img={sectionSeis} tit="Cold and windy" subtitulo="A typical &quot;tablecloth&quot; cloud formation that covers the view to the city" />
+                    <ImagenWithDescription handleClick={() => handleClickPhoto(sectionSeis)} img={sectionSeis} tit="Cold and windy" subtitulo="A typical &quot;tablecloth&quot; cloud formation that covers the view to the city" />
                     <div className="contentImageSectionSeis">
                         <TituloOrganism 
                         colorTag="#4DFFC9" 
@@ -174,7 +186,7 @@ export default function Travel(){
                         <p>Boulders Beach is famous for its African penguins. They settled there in 1982 and have grown to a colony of about 3000 birds. Penguins are everywhere in this place. There're also smaller places to swim and you might have the luck to see a penguin near you.</p>
                     </div>
                 </div>
-                <ImagenWithDescription img={sectionSiete} tit="African penguin" subtitulo="Don't get too close. They're keeping an eye on you." vertical={true} />
+                <ImagenWithDescription handleClick={() => handleClickPhoto(sectionSiete)} img={sectionSiete} tit="African penguin" subtitulo="Don't get too close. They're keeping an eye on you." vertical={true} />
             </div>
         </div> 
     </>

@@ -1,9 +1,9 @@
-export default function ImagenWithDescription({img, tit, subtitulo, vertical}: {img: string, tit: string, subtitulo: string, vertical?: boolean}) {
+export default function ImagenWithDescription({handleClick,img, tit, subtitulo, vertical}: {handleClick?:()=>void, img: string, tit: string, subtitulo: string, vertical?: boolean}) {
     if (vertical != null && vertical) {
         return (
             <>
                 <div className="contentImageOrganismoTres">
-                    <div className="contentimageExterior">
+                    <div onClick={handleClick} className="contentimageExterior">
                         <img className="imagenCover" src={img} alt="" />
                         <div style={{flexDirection:"row-reverse",alignItems:"end",marginLeft:"1em"}} className="contentInfoImage contentInfoImageVertical">
                             <span style={{writingMode: "vertical-lr"}} className="titInfoImage">{tit}</span>
@@ -18,7 +18,7 @@ export default function ImagenWithDescription({img, tit, subtitulo, vertical}: {
         return (
             <>
                 <div className="contentImageSectionSeis">
-                    <div className="imageSectionCinco">
+                    <div  onClick={handleClick} className="imageSectionCinco">
                         <img className="imagenCover" style={{width:"100%", height:"100%"}} src={img} alt="" />
                     </div>
                     <div className="contentInfoImage">
