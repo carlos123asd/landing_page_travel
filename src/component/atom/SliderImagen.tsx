@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { FaChevronLeft } from "react-icons/fa";
 import { sliderImagen, type sliderImagenSpace } from "../../utility/sliderImages";
 
-export default function SliderImagen({space}:{space:sliderImagenSpace}){
+export default function SliderImagen({handleClick,space}:{handleClick?:(image:string)=>void,space:sliderImagenSpace}){
     const [imagenActive,setImagenActive] = useState(1);
     const lenghtImages =  sliderImagen[space].length;
+
     useEffect(() => {
         console.log(imagenActive)
     },[imagenActive])
+
     const handleBack = () => {
         if(imagenActive >= 1){
             const back = imagenActive - 1
@@ -23,7 +25,7 @@ export default function SliderImagen({space}:{space:sliderImagenSpace}){
     }
 
     return <>
-        <div className="backgroundMiddleSectionTresLondon">
+        <div onClick={() => handleClick && handleClick(Object.values(sliderImagen[space])[imagenActive] as string)} className="backgroundMiddleSectionTresLondon">
             <img src={Object.values(sliderImagen[space])[imagenActive] as string} className="imagenCover" alt="" />
         </div>
         <div className="contentBtnsSectionTresLondon">

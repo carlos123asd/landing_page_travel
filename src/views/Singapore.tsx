@@ -10,10 +10,20 @@ import section22 from "../assets/singapore/section22.jpg";
 import MultiImageWithDescription from "../component/atom/MultiImageWithDescription";
 import section4 from "../assets/singapore/section4.jpg"
 import { CgAirplane } from "react-icons/cg";
+import { useState } from "react";
+import ModalPhoto from "../component/atom/ModalPhoto";
 
 export default function Singapore(){
+    const [showModal,setShowModal] = useState<boolean>(false);
+    const [imagenModal,setImageModal] = useState<string>("");
+
+    const handleClickPhoto = (imagen?:string) => {
+        setImageModal(imagen ?? "");
+        setShowModal(true)
+    };
     return <>
-        <div>
+        <div style={{position:"relative"}}>
+            <ModalPhoto show={showModal} close={setShowModal} imagen={imagenModal}/>
             <Header name="singapore" />
             {/*section uno*/}
             <div className="OrganismoUno">
@@ -30,13 +40,13 @@ export default function Singapore(){
                 </div>
                 <div className="contentImagesTrapezio">
                     <div className="contentimageTrapezio">
-                        <div className="ImageTrapezioLeft">
+                        <div onClick={() => handleClickPhoto(section1)} className="ImageTrapezioLeft">
                             <img className="imagenCover" src={section1} alt="" />
                         </div>
                         <InfoImage titulo="Skyscapes everywhere" subtitulo="Huge buildings are filling the Marina Bay district" />
                     </div>
                     <div className="contentimageTrapezio">
-                        <div className="ImageTrapezioRight">
+                        <div onClick={() => handleClickPhoto(section11)} className="ImageTrapezioRight">
                             <img className="imagenCover" src={section11} alt="" />
                         </div>
                         <InfoImage titulo="The Float" subtitulo="The world's largest floating stage is currently unilluminated" />
@@ -52,12 +62,12 @@ export default function Singapore(){
                         </div>
                         <p className="textSecundary contentParrafo"><a target="_blank" className="linkSingapore" href="https://www.marinabaysands.com/">Marina Bay Sands</a> is the most iconic hotel in Singapore. You should book at least one night here to get access to the amazing infinity pool at the top of the hotel.</p>
                     </BackgroundPoligon>
-                    <BackgroundPoligon position="rightTop">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(section2)} position="rightTop">
                         <img className="imagenCover" src={section2} alt="" />
                     </BackgroundPoligon>
                 </div>
                 <div className="contentBackgroundSectionCuatro">
-                    <BackgroundPoligon position="leftBottom">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(section22)} position="leftBottom">
                         <img className="imagenCover" src={section22} alt="" />
                     </BackgroundPoligon>
                     <BackgroundPoligon position="rightBottom">
@@ -76,7 +86,7 @@ export default function Singapore(){
                     tag="Gardens by the Bay" 
                     colorTitulo="#544645" 
                     titulo="A nature park like you haven't seen before" />
-                    <MultiImageWithDescription space="singapore" section="1" />
+                    <MultiImageWithDescription handleClickModal={(imagen) => handleClickPhoto(imagen)} space="singapore" section="1" />
                 </div>
                 <div className="contentSectionUnoLondonImage contentParrafo textSecundary">
                     <p>Gardens by the Bay is an immersive park area, made up of three waterfront gardens. It's part of the nation's plans to transform into a "City in a Garden" to raise the quality of life by enhancing greenery and flora in the city.</p>
@@ -109,7 +119,7 @@ export default function Singapore(){
                         </div>
                     </div>
                     <div className="contentRightImagenOrganismoDos">
-                        <div className="contentImageOrganismoDos">
+                        <div onClick={() => handleClickPhoto(section4)} className="contentImageOrganismoDos">
                             <img className="imagenCover" src={section4} alt="" />
                         </div>
                         <InfoImage titulo="The Rain Vortex" subtitulo="The world's tallest indoor waterfall" />

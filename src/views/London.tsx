@@ -7,9 +7,19 @@ import section22 from "../assets/london/section22.jpg";
 import SliderImagen from "../component/atom/SliderImagen";
 import BackgroundPoligon from "../component/atom/BackgroundPoligon";
 import type { MultiImagesSection, MultiImagesSpace } from "../utility/MultiImages";
+import { useState } from "react";
+import ModalPhoto from "../component/atom/ModalPhoto";
 export default function London() {
+    const [showModal,setShowModal] = useState<boolean>(false);
+    const [imagenModal,setImageModal] = useState<string>("");
+
+    const handleClickPhoto = (imagen?:string) => {
+        setImageModal(imagen ?? "");
+        setShowModal(true)
+    };
     return <>
-        <div>
+        <div style={{position:"relative"}}>
+            <ModalPhoto show={showModal} close={setShowModal} imagen={imagenModal}/>
             <Header name='london' />
             {/*Section uno*/}
             <div className="contentSectionUnoLondon">
@@ -19,7 +29,7 @@ export default function London() {
                     tag="River Thames" 
                     colorTitulo="#454A54" 
                     titulo="A sunny day in the city of rain" />
-                    <MultiImageWithDescription space="london" section="1" />
+                    <MultiImageWithDescription handleClickModal={(imagen) => handleClickPhoto(imagen)} space="london" section="1" />
                 </div>
                 <div className="contentSectionUnoLondonImage contentParrafo textSecundary">
                     <p>London is known for its rainy weather, but we had the luck to arrive on a sunny day. Perfect for a walk along the River Thames to explore the famous bridges of London.</p>
@@ -43,12 +53,12 @@ export default function London() {
                             </p>
                         </div>
                     </BackgroundPoligon>
-                    <BackgroundPoligon position="rightTop">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(section2)} position="rightTop">
                         <img className="imagenCover" src={section2} alt="" />
                     </BackgroundPoligon>
                 </div>
                 <div className="contentSectionDosLondonBottom">
-                    <BackgroundPoligon position="leftBottom">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(section22)} position="leftBottom">
                         <img className="imagenCover" src={section22} alt="" />
                     </BackgroundPoligon>
                     <BackgroundPoligon position="rightBottom">
@@ -77,7 +87,7 @@ export default function London() {
                 </div>
                 <div className="contentImageSectionTresLondon">
                     <div className="backgroundLeftSectionTresLondon"></div>
-                    <SliderImagen space="london"/>
+                    <SliderImagen handleClick={(imagen) => handleClickPhoto(imagen)} space="london"/>
                     <div className="backgroundRightSectionTresLondon"></div>
                 </div>
             </div>
@@ -89,7 +99,7 @@ export default function London() {
                     tag="London by Night" 
                     colorTitulo="#454A54" 
                     titulo="The city that shines by night" />
-                    <MultiImageWithDescription space="london" section={2 as unknown as MultiImagesSection<MultiImagesSpace>} />
+                    <MultiImageWithDescription handleClickModal={(imagen) => handleClickPhoto(imagen)} space="london" section={2 as unknown as MultiImagesSection<MultiImagesSpace>} />
                 </div>
                 <div className="contentSectionUnoLondonImage contentParrafo textSecundary">
                     <p>Let's talk about how beautiful London looks by night. The sky was covered with clouds most of the time and we only saw the sun on the day we arrived. A bad condition for photography. Turns out this isn't a problem in London, as the city shines by night. <mark style={{background:"#454A54",color:"white"}}>The winter decoration, the streetlights and the characteristic buildings are gorgeous.</mark> Walking along the streets and taking photos of them started to get addicting. Why even going outside during day when everything looks better by night?</p>

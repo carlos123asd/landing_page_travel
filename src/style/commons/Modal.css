@@ -22,8 +22,8 @@
     height: 100%;
 }
 .contentImageModal{
-    width: 80%;
-    height: auto;
+    width: auto;
+    height: 90%;
     z-index: 50;
 }
 .closeBtnModal{
@@ -31,7 +31,7 @@
     right: 5%;
     top:  5%;
     transition: all .3s ease;
-    z-index: 30;
+    z-index: 50;
 }
 .closeBtnModal:hover{
     cursor: pointer;
@@ -41,5 +41,9 @@
     .closeBtnModal{
         width: 80px;
         height: 80px;
+    }
+    .contentImageModal{
+        width: auto;
+        height: auto;
     }
 }

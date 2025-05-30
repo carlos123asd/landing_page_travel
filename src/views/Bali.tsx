@@ -12,10 +12,20 @@ import ImagenWithDescription from "../component/atom/ImagenWithDescription";
 import BackgroundPoligon from "../component/atom/BackgroundPoligon";
 import Estrella from "../component/atom/Estrella";
 import SliderImagen from "../component/atom/SliderImagen";
+import ModalPhoto from "../component/atom/ModalPhoto";
+import { useState } from "react";
 
 export default function Bali(){
+    const [showModal,setShowModal] = useState<boolean>(false);
+    const [imagenModal,setImageModal] = useState<string>("");
+
+    const handleClickPhoto = (imagen?:string) => {
+        setImageModal(imagen ?? "");
+        setShowModal(true)
+    };
     return <>
-        <div>
+        <div style={{position:"relative"}}>
+            <ModalPhoto show={showModal} close={setShowModal} imagen={imagenModal}/>
             <Header name="bali" />
             {/*section uno*/}
             <div className="OrganismoUno">
@@ -32,13 +42,13 @@ export default function Bali(){
                 </div>
                 <div className="contentImagesTrapezio">
                     <div className="contentimageTrapezio">
-                        <div className="ImageTrapezioLeft">
+                        <div onClick={() => handleClickPhoto(section1)} className="ImageTrapezioLeft">
                             <img className="imagenCover" src={section1} alt="" />
                         </div>
                         <InfoImage titulo="Coffee and Co." subtitulo="One of many coffee shops in Ubud" />
                     </div>
                     <div className="contentimageTrapezio">
-                        <div className="ImageTrapezioRight">
+                        <div onClick={() => handleClickPhoto(section11)} className="ImageTrapezioRight">
                             <img className="imagenCover" src={section11} alt="" />
                         </div>
                         <InfoImage titulo="Streets of Ubud" subtitulo="Scooters are everywhere in Bali" />
@@ -53,7 +63,7 @@ export default function Bali(){
                     <div className="backgroundContentRight"></div>
                 </div>
                 <div className="contentMainSectionSeis">
-                    <ImagenWithDescription img={section2} tit="Tegalalang Rice Terrace" subtitulo="One of the famous tourist objects in Bali" />
+                    <ImagenWithDescription handleClick={() => handleClickPhoto(section2)} img={section2} tit="Tegalalang Rice Terrace" subtitulo="One of the famous tourist objects in Bali" />
                     <div className="contentImageSectionSeis">
                         <TituloOrganism 
                         colorTag="#FFB54D" 
@@ -80,7 +90,7 @@ export default function Bali(){
                         <p className="backgroundopacityMonkey">Visiting the Sacred Monkey Forest Sanctuary in Ubud is a must. The forest is full of monkeys that have become accustomed to humans, making the visit extremely funny and entertaining.</p>
                     </div>
                 </div>
-                <ImagenWithDescription img={sectionTres} tit="Bananas everywhere" subtitulo="A perfect place to take photos of monkeys" vertical={true} />
+                <ImagenWithDescription handleClick={() => handleClickPhoto(sectionTres)} img={sectionTres} tit="Bananas everywhere" subtitulo="A perfect place to take photos of monkeys" vertical={true} />
             </div>
             {/*section cuatro*/}
             <div style={{display:"flex",flexDirection:"column",gap:"3em"}}>
@@ -91,12 +101,12 @@ export default function Bali(){
                         </div>
                         <p className="textSecundary contentParrafo"><a target="_blank" className="linkBali" href="https://senetan.villas/">Senetan Villas & Spa Resort</a> offers private pool villas in the middle of the jungle, 30 minutes away from busy Ubud.</p>
                     </BackgroundPoligon>
-                    <BackgroundPoligon position="rightTop">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(section4)} position="rightTop">
                         <img className="imagenCover" src={section4} alt="" />
                     </BackgroundPoligon>
                 </div>
                 <div className="contentBackgroundSectionCuatro">
-                    <BackgroundPoligon position="leftBottom">
+                    <BackgroundPoligon handleClick={() => handleClickPhoto(section44)} position="leftBottom">
                         <img className="imagenCover" src={section44} alt="" />
                     </BackgroundPoligon>
                     <BackgroundPoligon position="rightBottom">
@@ -120,7 +130,7 @@ export default function Bali(){
                 </div>
                 <div className="contentImageSectionTresLondon">
                     <div className="backgroundLeftSectionTresLondon"></div>
-                    <SliderImagen space="bali"/>
+                    <SliderImagen handleClick={(imagen) => handleClickPhoto(imagen)} space="bali"/>
                     <div className="backgroundRightSectionTresLondon"></div>
                 </div>
             </div>

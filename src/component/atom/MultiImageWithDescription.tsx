@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { multiImages, type MultiImagesSection, type MultiImagesSpace } from "../../utility/MultiImages";
 
-export default function MultiImageWithDescription({space,section}:{space:MultiImagesSpace,section:MultiImagesSection<MultiImagesSpace>}) {
+export default function MultiImageWithDescription({handleClickModal,space,section}:{handleClickModal?:(image:string)=>void,space:MultiImagesSpace,section:MultiImagesSection<MultiImagesSpace>}) {
     const [imageActive,setImageActive] = useState(0);
 
     const handleClick = (index:number) => {
@@ -11,7 +11,7 @@ export default function MultiImageWithDescription({space,section}:{space:MultiIm
     return <>
         <div className="contentMultiImageMain">
             <div className="contentMultiImageDescription">
-                <div className="imageSectionCinco">
+                <div onClick={() => handleClickModal && handleClickModal(multiImages[space][section][imageActive].imagen)} className="imageSectionCinco">
                     <img className="imagenCover" style={{width:"100%", height:"100%"}} src={multiImages[space][section][imageActive].imagen} alt="" />
                 </div>
                 <div className="contentInfoMultiImage">
