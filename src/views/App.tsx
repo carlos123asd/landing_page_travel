@@ -6,8 +6,10 @@ function App() {
 
   return (
     <>
-        <BtnReturnMenu position={positionBtnMenu.left}/>
-        <Nav />
+      <div  style={{overflow:"hidden"}}>
+          <BtnReturnMenu position={positionBtnMenu.left}/>
+          <Nav />
+      </div>
     </>
   )
 }
